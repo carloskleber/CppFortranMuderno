@@ -18,6 +18,7 @@ include(FetchContent)
 find_package(Boost REQUIRED)
 
 # Teste de biblioteca externa - Eigen
+# Na pratica nao sei se sera utilizada (os calculos pesados serao em Fortran)
 FetchContent_Declare(
   eigen
   GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
@@ -25,5 +26,5 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(eigen)
 
 add_subdirectory(src)
-add_subdirectory(apps)
+add_subdirectory(app)
 
